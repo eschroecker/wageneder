@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wageneder</title>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=IHR_KEY" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/bc7d5e0a2c.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        map.setCenter(new GLatLng(48.241726702447444, 13.439943798619481), 18);
+      }
+    }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/Style.css">
+</head>
+
+<body onload="load()" onunload="GUnload()">
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light primary-background" id="navbar">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" id="navbar-button"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header-list">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Produkte
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Kerzen.html">Kerzen</a></li>
+                <li><a class="dropdown-item" href="Mittelwaende.html">Mittelwände</a></li>
+                <li><a class="dropdown-item" href="Bienenwachswickel.html">Bienenwachswickel</a></li>
+                <li><a class="dropdown-item" href="Wachsplatten.html">Wachsplatten</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">Über uns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Downloads.html">Downloads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="behind-navbar"></div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Spinner -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="IMGs/Slideshow-1.jpg" class="d-block w-100" alt="Slide-1">
+          <div class="carousel-caption d-none d-md-block" style="width: 25rem;">
+            <div class="card custom-carousel-card">
+              <img src="IMGs/Logo.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Hofing 28, 4970 Eitzing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="IMGs/Slideshow-2.jpg" class="d-block w-100" alt="Slide-2">
+          <div class="carousel-caption d-none d-md-block" style="width: 25rem;">
+            <div class="card custom-carousel-card">
+              <img src="IMGs/Logo.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Hofing 28, 4970 Eitzing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="IMGs/Slideshow-3.jpg" class="d-block w-100" alt="Slide-3">
+          <div class="carousel-caption d-none d-md-block" style="width: 25rem;">
+            <div class="card custom-carousel-card">
+              <img src="IMGs/Logo.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Hofing 28, 4970 Eitzing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" data-bs-target="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <div id="main-background">
+      <div class="container">
+
+        <!-- Upper Container -->
+        <div class="row" id="upper-container">
+          <div class="card bg-transparent border-0 col-7 ">
+            <img src="IMGs/About.png" class="card-img" alt="Über uns">
+            <div class="card-img-overlay d-flex flex-column justify-content-center">
+              <a class="btn mx-auto primary-background-transparent custom-button custom-label" href="About.html" role="button">
+                Über uns
+              </a>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0 col-5 custom-center-card">
+            <img src="IMGs/Downloads.jpg" class="card-img" alt="Downloads">
+            <div class="card-img-overlay d-flex flex-column justify-content-center">
+              <a class="btn mx-auto primary-background-transparent custom-button custom-label" href="Downloads.html" role="button">
+                Downloads
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Products -->
+        <div>
+          <h1 class="text-center pb-3 custom-headline">Produkte</h1>
+          <div class="row">
+            <div class="col-3">
+              <div class="card">
+                <img src="IMGs/Kerzen.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column justify-content-center">
+                  <a href="Kerzen.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
+                    Kerzen
+                  </a>
+                </div>                
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img src="IMGs/Mittelwaende.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column justify-content-center">
+                  <a href="Mittelwaende.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
+                    Mittelwände
+                  </a>
+                </div>  
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img src="IMGs/Bienenwachswickel.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column justify-content-center">
+                  <a href="Bienenwachswickel.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
+                    Bienenwachswickel
+                  </a>
+                </div>  
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img src="IMGs/Wachsplatten.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column justify-content-center">
+                  <a href="Wachsplatten.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
+                    Wachsplatten
+                  </a>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Lower Container -->
+        <h1 class="text-center pb-3 custom-headline">Wachsverarbeitung - Mittelwände gegossen oder gewalzt</h1>
+        <div class="row" id="lower-container">  
+
+          <!-- Spinner -->
+          <div class="col-6">
+            <div id="lowerCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="IMGs/Wachsverarbeitung-1.jpg" class="d-block w-100" alt="Slide-1">
+                </div>
+                <div class="carousel-item">
+                  <img src="IMGs/Wachsverarbeitung-2.jpg" class="d-block w-100" alt="Slide-2">
+                </div>
+                <div class="carousel-item">
+                  <img src="IMGs/Wachsverarbeitung-3.jpg" class="d-block w-100" alt="Slide-3">
+                </div>
+                <div class="carousel-item">
+                  <img src="IMGs/Wachsverarbeitung-4.jpg" class="d-block w-100" alt="Slide-4">
+                </div>
+                <div class="carousel-item">
+                  <img src="IMGs/Wachsverarbeitung-5.jpg" class="d-block w-100" alt="Slide-5">
+                </div>
+                <div class="carousel-item">
+                  <img src="IMGs/Wachsverarbeitung-6.jpg" class="d-block w-100" alt="Slide-6">
+                </div>
+                <div class="carousel-item">
+                  <img src="IMGs/Wachsverarbeitung-7.jpg" class="d-block w-100" alt="Slide-7">
+                </div>
+              </div>
+              <a class="carousel-control-prev" data-bs-target="#lowerCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" data-bs-target="#lowerCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="col-6">
+            <p>
+              Bei der Herstellung von <b>gegossenen Mittelwänden</b> wird das flüssige Wachs auf rotierende, gekühlte Walzen aufgebracht und erhält somit das typische Prägemuster. Das erstarrte Wachsband wird dann auf das gewünschte Maß zugeschnitten.
+              Gegossene Mittelwände werden von den Bienen schneller ausgebaut, weil sie mehr Wachs zur Verfügung haben. Allerdings sind sie härter und somit auch zerbrechlicher.
+              Mit unseren vollautomatischen Kunstwabenmaschinen können auch kleinere Mengen an Mittelwänden hergestellt werden. Deshalb bieten wir auch die
+            </p>
+            <h5 class="text-center pb-2 text-danger">Eigenwachsumarbeitung schon ab 30kg Wachs</h5>
+            <p class="mb-0">
+              an. Somit haben auch Hobbyimker die Möglichkeit, ihre eigenen Mittelwände wieder zu erhalten.
+              Bei <b>gewalzten Mittelwänden</b> wird mit einer Wachsbandmaschine ein glattes Band hergestellt, dieses wird dann zwischen zwei Prägewalzen gelegt und durch Druck die Zellenanordnung eingeprägt. Dadurch sind sie elastischer und eignen sich hervorragend zur Herstellung von gedrehten Bienenwachskerzen.
+            </p>
+          </div>        
+          
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div id="footer-background">
+      <div class="container">
+        <div id="footer-container">
+          <div class="col-6 p-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2657.1864931542323!2d13.4377551163644!3d48.2415373518923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47741545f028a339%3A0xb9376083654f55ce!2sWachsverarbeitung%20und%20Imkerei%20-%20Wageneder!5e0!3m2!1sde!2sat!4v1636383105804!5m2!1sde!2sat"
+              width="100%" height="100%" id="map" style="border-radius: 0.25rem;" allowfullscreen=""
+              loading="lazy"></iframe>
+          </div>
+          <span class="col-6 p-4" id="footer-content">
+            <div class="col-6 p-1">
+              <img class="footer-logo" src="IMGs/Logo.png" height="100%" width="81.8926%">
+            </div>
+            <div class="col-6 p-4" id="footer-info">
+              <h5>Informationen</h5>
+              <div><a class="link-secondary" href="Datenschutz.html">Datenschutzerklärung</a></div>
+              <div><a class="link-secondary" href="Impressum.html">Impressum</a></div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    min-height: max-content;
+}
+
+.body{
+    font-family: OpenSans;
+}
+
+.primary-background{
+    background-color: rgb(105, 133, 48);
+}
+
+.primary-background-transparent{
+    background-color: rgba(105, 133, 48, 0.7);
+}
+
+.secondary-background{
+    background-color: #eee;
+}
+
+
+/* header */
+#navbar{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+}
+
+@media (min-width: 1250px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+}
+
+#header-list{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Papyrus;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+#behind-navbar{
+    height: 62px;
+}
+
+#navbar-button{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+/* main */
+#main-background{
+    background-color: #eee;
+}
+
+.custom-button{
+    border: 1px solid transparent;
+}
+
+.custom-button:hover{
+    background-color: #eee;
+    color: #688530;
+    border: 1px solid #688530;
+}
+
+.featurette-divider {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.custom-headline{
+    color: #688530;
+    font-family: Papyrus;
+}
+
+#upper-container{
+    padding-top: 40px;
+}
+
+#lower-container{
+    padding-bottom: 40px;
+}
+
+.custom-label{
+    color: #eee;
+    font-size: 1.1rem;
+}
+
+.custom-link{
+    color: #688530;
+}
+
+.custom-link:hover{
+    color: black;
+}
+
+/* home */
+.custom-carousel-card{
+    border-radius: 1.3rem;
+    background-color: #eee;
+    font-size: x-large;
+    color: brown;
+}
+
+
+
+
+
+/* footer */
+#footer-background{
+    background-color: #DBA72B;
+}
+
+#footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer-content{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+@media screen and (max-width: 990px) {
+    #footer-container{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #footer-container .col-6 {
+        width: 100%;
+        padding: 0!important;
+    }
+
+    #footer-container .col-6 .col-6 {
+        width: 50%;
+    }
+
+    #map{
+        height: 300px;
+    }
+
+    #footer-info{
+        margin: 50px;
+    }
+}
