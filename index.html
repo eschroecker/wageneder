@@ -1,285 +1,844 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8">
-  <title>Wageneder</title>
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=IHR_KEY" type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wageneder - Wachsverarbeitung & Imkerei</title>
   <script src="https://kit.fontawesome.com/bc7d5e0a2c.js" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    function load() {
-      if (GBrowserIsCompatible()) {
-        var map = new GMap2(document.getElementById("map"));
-        map.setCenter(new GLatLng(48.241726702447444, 13.439943798619481), 18);
-      }
-    }
-  </script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/Style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="load()" onunload="GUnload()">
-
-  <!-- Header -->
-  <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light primary-background" id="navbar">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" id="navbar-button"></span>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header-list">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Über uns</a>
+          </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="#products">Produkte</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Produkte
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="Kerzen.html">Kerzen</a></li>
-                <li><a class="dropdown-item" href="Mittelwaende.html">Mittelwände</a></li>
-                <li><a class="dropdown-item" href="Bienenwachswickel.html">Bienenwachswickel</a></li>
-                <li><a class="dropdown-item" href="Wachsplatten.html">Wachsplatten</a></li>
-              </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#candles">Kerzen</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="About.html">Über uns</a>
+            <a class="nav-link" href="#processing">Wachsverarbeitung</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Downloads.html">Downloads</a>
+            <a class="nav-link" href="#downloads">Downloads</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            <a class="nav-link" href="#contact">Kontakt</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div id="behind-navbar"></div>
-  </header>
 
-  <!-- Main -->
-  <main>
-    <!-- Spinner -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="IMGs/Slideshow-1.jpg" class="d-block w-100" alt="Slide-1">
-          <div class="carousel-caption d-none d-md-block" style="width: 25rem;">
-            <div class="card custom-carousel-card">
-              <img src="IMGs/Logo.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Hofing 28, 4970 Eitzing</p>
-              </div>
-            </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-content-wrapper">
+        <div class="hero-content">
+          <!-- Logo -->
+          <div class="logo-container">
+            <img src="IMGs/Logo.png" alt="Wageneder Logo" class="hero-logo">
+            <div class="logo-glow"></div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="IMGs/Slideshow-2.jpg" class="d-block w-100" alt="Slide-2">
-          <div class="carousel-caption d-none d-md-block" style="width: 25rem;">
-            <div class="card custom-carousel-card">
-              <img src="IMGs/Logo.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Hofing 28, 4970 Eitzing</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="IMGs/Slideshow-3.jpg" class="d-block w-100" alt="Slide-3">
-          <div class="carousel-caption d-none d-md-block" style="width: 25rem;">
-            <div class="card custom-carousel-card">
-              <img src="IMGs/Logo.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Hofing 28, 4970 Eitzing</p>
-              </div>
-            </div>
+          
+          <!-- Main Title -->
+          <h1 class="hero-title">
+            <span class="title-word">Wachsverarbeitung</span>
+            <span class="title-separator">&</span>
+            <span class="title-word">Imkerei</span>
+          </h1>
+          
+          <!-- Company Name -->
+          <h2 class="hero-subtitle">
+            <span class="company-name">Wageneder</span>
+          </h2>
+          
+          <!-- Description -->
+          <p class="hero-description">
+            Im Einklang mit der Natur - seit Jahren produzieren wir hochwertige Bienenwachsprodukte 
+            mit modernster Technologie und traditionellem Handwerk.
+          </p>
+          
+          <!-- Call to Action Buttons -->
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary pulse-btn">
+              <i class="fas fa-shopping-basket me-2"></i>
+              Unsere Produkte
+            </a>
+            <a href="#about" class="btn btn-outline-primary">
+              <i class="fas fa-users me-2"></i>
+              Über uns
+            </a>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </a>
-      <a class="carousel-control-next" data-bs-target="#carouselExampleCaptions" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </a>
+              </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Über uns</h2>
+          <p class="section-subtitle">Wachsverarbeitung & Imkerei Wageneder</p>
+            </div>
+          </div>
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="lead">
+            Unsere Vision, im Einklang mit der Natur zu wirtschaften und zu leben, haben wir uns hier im Innviertel, 
+            einer leicht hügeligen, reich bewaldeten Landschaft, erfüllt. Etwas davon an Dich weiterzugeben ist uns ein Anliegen.
+          </p>
+          <p>
+            Seit 2021 nutzen wir auch die Kraft der Sonne und produzieren mit unserer Photovoltaikanlage umweltfreundlichen Solarstrom.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="team-card">
+            <div class="team-image">
+              <img src="IMGs/About-Gerhard-Wageneder.jpg" alt="Gerhard Wageneder" class="img-fluid">
+            </div>
+            <div class="team-content">
+              <h4>Gerhard Wageneder</h4>
+              <p class="team-role">Maschinenschlosser & Geschäftsführung</p>
+              <div class="team-contact">
+                <p><i class="fas fa-phone"></i> 0676 / 6869322</p>
+                <p><i class="fas fa-envelope"></i> wageneder.gerhard@inext.at</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="team-card">
+            <div class="team-image">
+              <img src="IMGs/About-Manuela-Wageneder.jpg" alt="Manuela Wageneder" class="img-fluid">
+            </div>
+            <div class="team-content">
+              <h4>Manuela Wageneder</h4>
+              <p class="team-role">Diplom Kinderkrankenschwester & Geschäftsführung</p>
+              <div class="team-contact">
+                <p><i class="fas fa-phone"></i> 0676 / 7402780</p>
+                <p><i class="fas fa-envelope"></i> manuela.wageneder@gmx.at</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div id="main-background">
+  <!-- Products Section -->
+  <section id="products" class="section-padding bg-light">
       <div class="container">
-
-        <!-- Upper Container -->
-        <div class="row" id="upper-container">
-          <div class="card bg-transparent border-0 col-7 ">
-            <img src="IMGs/About.png" class="card-img" alt="Über uns">
-            <div class="card-img-overlay d-flex flex-column justify-content-center">
-              <a class="btn mx-auto primary-background-transparent custom-button custom-label" href="About.html" role="button">
-                Über uns
-              </a>
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Unsere Produkte</h2>
+          <p class="section-subtitle">Hochwertige Bienenwachsprodukte für jeden Bedarf</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="product-card" data-bs-toggle="modal" data-bs-target="#candlesModal">
+            <div class="product-image">
+              <img src="IMGs/Kerzen.jpg" alt="Kerzen" class="img-fluid">
             </div>
-          </div>
-          <div class="card bg-transparent border-0 col-5 custom-center-card">
-            <img src="IMGs/Downloads.jpg" class="card-img" alt="Downloads">
-            <div class="card-img-overlay d-flex flex-column justify-content-center">
-              <a class="btn mx-auto primary-background-transparent custom-button custom-label" href="Downloads.html" role="button">
-                Downloads
-              </a>
+            <div class="product-content">
+              <h4>Kerzen</h4>
+              <p>Handgemachte Bienenwachskerzen in verschiedenen Formen und Größen</p>
+              <span class="product-price">Ab 3,00 €</span>
             </div>
           </div>
         </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="product-card" data-bs-toggle="modal" data-bs-target="#mittelwaendeModal">
+            <div class="product-image">
+              <img src="IMGs/Mittelwaende.jpg" alt="Mittelwände" class="img-fluid">
+            </div>
+            <div class="product-content">
+              <h4>Mittelwände</h4>
+              <p>Gegossene und gewalzte Mittelwände in allen gängigen Maßen</p>
+              <span class="product-price">Auf Anfrage</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="product-card" data-bs-toggle="modal" data-bs-target="#wickelModal">
+            <div class="product-image">
+              <img src="IMGs/Bienenwachswickel.jpg" alt="Bienenwachswickel" class="img-fluid">
+            </div>
+            <div class="product-content">
+              <h4>Bienenwachswickel</h4>
+              <p>Traditionelles Hausmittel bei Husten und Erkältungen</p>
+              <span class="product-price">4,00 - 7,00 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="product-card" data-bs-toggle="modal" data-bs-target="#wachsplattenModal">
+            <div class="product-image">
+              <img src="IMGs/Wachsplatten.jpg" alt="Wachsplatten" class="img-fluid">
+            </div>
+            <div class="product-content">
+              <h4>Wachsplatten</h4>
+              <p>Zur Kerzenherstellung in allen gewünschten Größen</p>
+              <span class="product-price">Auf Anfrage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <hr class="featurette-divider">
-
-        <!-- Products -->
-        <div>
-          <h1 class="text-center pb-3 custom-headline">Produkte</h1>
+  <!-- Candles Gallery Section -->
+  <section id="candles" class="section-padding bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Unsere Kerzen</h2>
+          <p class="section-subtitle">Handgemachte Bienenwachskerzen - Eigene Erzeugung</p>
+        </div>
+      </div>
+      
+      <!-- Candles Grid -->
           <div class="row">
-            <div class="col-3">
-              <div class="card">
-                <img src="IMGs/Kerzen.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay d-flex flex-column justify-content-center">
-                  <a href="Kerzen.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
-                    Kerzen
-                  </a>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-1.jpg" alt="Biene groß" class="img-fluid">
+            <div class="candle-info">
+              <h5>Biene groß</h5>
+              <span class="price">7,00 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-2.jpg" alt="Biene klein" class="img-fluid">
+            <div class="candle-info">
+              <h5>Biene klein</h5>
+              <span class="price">5,50 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-3.jpg" alt="Bienenhaus" class="img-fluid">
+            <div class="candle-info">
+              <h5>Bienenhaus</h5>
+              <span class="price">3,50 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-4.jpg" alt="Bienenkorb" class="img-fluid">
+            <div class="candle-info">
+              <h5>Bienenkorb</h5>
+              <span class="price">5,00 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-5.jpg" alt="Christbaumkerzen" class="img-fluid">
+            <div class="candle-info">
+              <h5>Christbaumkerzen 10Stk.</h5>
+              <span class="price">5,00 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-6.jpg" alt="Kripperl" class="img-fluid">
+            <div class="candle-info">
+              <h5>Kripperl</h5>
+              <span class="price">4,50 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-7.jpg" alt="Kugel" class="img-fluid">
+            <div class="candle-info">
+              <h5>Kugel</h5>
+              <span class="price">5,00 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-8.jpg" alt="Stern" class="img-fluid">
+            <div class="candle-info">
+              <h5>Stern</h5>
+              <span class="price">5,00 €</span>
+            </div>
                 </div>                
               </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-9.jpg" alt="Stumpen groß" class="img-fluid">
+            <div class="candle-info">
+              <h5>Stumpen groß</h5>
+              <span class="price">12,00 €</span>
             </div>
-            <div class="col-3">
-              <div class="card">
-                <img src="IMGs/Mittelwaende.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay d-flex flex-column justify-content-center">
-                  <a href="Mittelwaende.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
-                    Mittelwände
-                  </a>
                 </div>  
               </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-10.jpg" alt="Stumpen klein" class="img-fluid">
+            <div class="candle-info">
+              <h5>Stumpen klein</h5>
+              <span class="price">3,00 €</span>
             </div>
-            <div class="col-3">
-              <div class="card">
-                <img src="IMGs/Bienenwachswickel.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay d-flex flex-column justify-content-center">
-                  <a href="Bienenwachswickel.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
-                    Bienenwachswickel
-                  </a>
                 </div>  
               </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-11.jpg" alt="Stumpen mittel" class="img-fluid">
+            <div class="candle-info">
+              <h5>Stumpen mittel</h5>
+              <span class="price">6,00 €</span>
             </div>
-            <div class="col-3">
-              <div class="card">
-                <img src="IMGs/Wachsplatten.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay d-flex flex-column justify-content-center">
-                  <a href="Wachsplatten.html" class="btn mx-auto primary-background-transparent custom-button custom-label">
-                    Wachsplatten
-                  </a>
                 </div>  
               </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="candle-card">
+            <img src="IMGs/Kerzen-12.jpg" alt="Tannenbaum" class="img-fluid">
+            <div class="candle-info">
+              <h5>Tannenbaum</h5>
+              <span class="price">3,50 €</span>
             </div>
           </div>
         </div>
-
-        <hr class="featurette-divider">
-
-        <!-- Lower Container -->
-        <h1 class="text-center pb-3 custom-headline">Wachsverarbeitung - Mittelwände gegossen oder gewalzt</h1>
-        <div class="row" id="lower-container">  
-
-          <!-- Spinner -->
-          <div class="col-6">
-            <div id="lowerCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="IMGs/Wachsverarbeitung-1.jpg" class="d-block w-100" alt="Slide-1">
-                </div>
-                <div class="carousel-item">
-                  <img src="IMGs/Wachsverarbeitung-2.jpg" class="d-block w-100" alt="Slide-2">
-                </div>
-                <div class="carousel-item">
-                  <img src="IMGs/Wachsverarbeitung-3.jpg" class="d-block w-100" alt="Slide-3">
-                </div>
-                <div class="carousel-item">
-                  <img src="IMGs/Wachsverarbeitung-4.jpg" class="d-block w-100" alt="Slide-4">
-                </div>
-                <div class="carousel-item">
-                  <img src="IMGs/Wachsverarbeitung-5.jpg" class="d-block w-100" alt="Slide-5">
-                </div>
-                <div class="carousel-item">
-                  <img src="IMGs/Wachsverarbeitung-6.jpg" class="d-block w-100" alt="Slide-6">
-                </div>
-                <div class="carousel-item">
-                  <img src="IMGs/Wachsverarbeitung-7.jpg" class="d-block w-100" alt="Slide-7">
-                </div>
-              </div>
-              <a class="carousel-control-prev" data-bs-target="#lowerCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </a>
-              <a class="carousel-control-next" data-bs-target="#lowerCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </a>
-            </div>
-          </div>
-          <!-- Text -->
-          <div class="col-6">
-            <p>
-              Bei der Herstellung von <b>gegossenen Mittelwänden</b> wird das flüssige Wachs auf rotierende, gekühlte Walzen aufgebracht und erhält somit das typische Prägemuster. Das erstarrte Wachsband wird dann auf das gewünschte Maß zugeschnitten.
-              Gegossene Mittelwände werden von den Bienen schneller ausgebaut, weil sie mehr Wachs zur Verfügung haben. Allerdings sind sie härter und somit auch zerbrechlicher.
-              Mit unseren vollautomatischen Kunstwabenmaschinen können auch kleinere Mengen an Mittelwänden hergestellt werden. Deshalb bieten wir auch die
-            </p>
-            <h5 class="text-center pb-2 text-danger">Eigenwachsumarbeitung schon ab 30kg Wachs</h5>
-            <p class="mb-0">
-              an. Somit haben auch Hobbyimker die Möglichkeit, ihre eigenen Mittelwände wieder zu erhalten.
-              Bei <b>gewalzten Mittelwänden</b> wird mit einer Wachsbandmaschine ein glattes Band hergestellt, dieses wird dann zwischen zwei Prägewalzen gelegt und durch Druck die Zellenanordnung eingeprägt. Dadurch sind sie elastischer und eignen sich hervorragend zur Herstellung von gedrehten Bienenwachskerzen.
-            </p>
-          </div>        
-          
-        </div>
-
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div id="footer-background">
+  <!-- Wax Processing Section -->
+  <section id="processing" class="section-padding bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Wachsverarbeitung</h2>
+          <p class="section-subtitle">Mittelwände gegossen oder gewalzt</p>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div id="processingCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="IMGs/Wachsverarbeitung-1.jpg" class="d-block w-100" alt="Wachsverarbeitung 1">
+                </div>
+                <div class="carousel-item">
+                <img src="IMGs/Wachsverarbeitung-2.jpg" class="d-block w-100" alt="Wachsverarbeitung 2">
+                </div>
+                <div class="carousel-item">
+                <img src="IMGs/Wachsverarbeitung-3.jpg" class="d-block w-100" alt="Wachsverarbeitung 3">
+                </div>
+                <div class="carousel-item">
+                <img src="IMGs/Wachsverarbeitung-4.jpg" class="d-block w-100" alt="Wachsverarbeitung 4">
+                </div>
+                <div class="carousel-item">
+                <img src="IMGs/Wachsverarbeitung-5.jpg" class="d-block w-100" alt="Wachsverarbeitung 5">
+                </div>
+                <div class="carousel-item">
+                <img src="IMGs/Wachsverarbeitung-6.jpg" class="d-block w-100" alt="Wachsverarbeitung 6">
+                </div>
+                <div class="carousel-item">
+                <img src="IMGs/Wachsverarbeitung-7.jpg" class="d-block w-100" alt="Wachsverarbeitung 7">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#processingCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#processingCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="processing-content">
+            <p>
+              Bei der Herstellung von <strong>gegossenen Mittelwänden</strong> wird das flüssige Wachs auf rotierende, 
+              gekühlte Walzen aufgebracht und erhält somit das typische Prägemuster. Das erstarrte Wachsband wird 
+              dann auf das gewünschte Maß zugeschnitten.
+            </p>
+            <p>
+              Gegossene Mittelwände werden von den Bienen schneller ausgebaut, weil sie mehr Wachs zur Verfügung haben. 
+              Allerdings sind sie härter und somit auch zerbrechlicher.
+            </p>
+            <div class="highlight-box">
+              <h5 class="text-center text-danger">Eigenwachsumarbeitung schon ab 30kg Wachs</h5>
+            </div>
+            <p>
+              Mit unseren vollautomatischen Kunstwabenmaschinen können auch kleinere Mengen an Mittelwänden hergestellt werden. 
+              Somit haben auch Hobbyimker die Möglichkeit, ihre eigenen Mittelwände wieder zu erhalten.
+            </p>
+            <p>
+              Bei <strong>gewalzten Mittelwänden</strong> wird mit einer Wachsbandmaschine ein glattes Band hergestellt, 
+              dieses wird dann zwischen zwei Prägewalzen gelegt und durch Druck die Zellenanordnung eingeprägt. 
+              Dadurch sind sie elastischer und eignen sich hervorragend zur Herstellung von gedrehten Bienenwachskerzen.
+            </p>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads Section -->
+  <section id="downloads" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Downloads</h2>
+          <p class="section-subtitle">Landesverband - Gesetze - Verordnungen</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="downloads-grid">
+            <a href="Downloads/Zertifikat-Wachsverarbeitung.pdf" class="download-card" target="_blank">
+              <div class="download-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="download-content">
+                <h5>Zertifikat-Wachsverarbeitung</h5>
+                <p>Offizielles Zertifikat für unsere Wachsverarbeitung</p>
+              </div>
+            </a>
+            <a href="Downloads/Wachsmottenbekaempfung.pdf" class="download-card" target="_blank">
+              <div class="download-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="download-content">
+                <h5>Wachsmottenbekämpfung</h5>
+                <p>Informationen zur Bekämpfung von Wachsmotten</p>
+              </div>
+            </a>
+            <a href="Downloads/ANTRAG Untersuchung Version 30.pdf" class="download-card" target="_blank">
+              <div class="download-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="download-content">
+                <h5>Antrag Untersuchung</h5>
+                <p>Formular für Untersuchungsanträge</p>
+              </div>
+            </a>
+            <a href="Downloads/Anleitung_Entnahme_Futterkranzprobe_Version_3_01.pdf" class="download-card" target="_blank">
+              <div class="download-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="download-content">
+                <h5>Anleitung Entnahme Futterkranzprobe</h5>
+                <p>Detaillierte Anleitung zur Probenentnahme</p>
+              </div>
+            </a>
+            <a href="Downloads/vom Rohwachs zur neuen Mittelwand.pdf" class="download-card" target="_blank">
+              <div class="download-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="download-content">
+                <h5>Vom Rohwachs zur Mittelwand</h5>
+                <p>Prozessbeschreibung der Mittelwandherstellung</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-light">
       <div class="container">
-        <div id="footer-container">
-          <div class="col-6 p-4">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Kontakt</h2>
+          <p class="section-subtitle">Besuchen Sie uns oder kontaktieren Sie uns direkt</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h5>Adresse</h5>
+                <p>Hofing 28, 4970 Eitzing</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <h5>Kontaktperson</h5>
+                <p>Manuela Wageneder</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                  <h5>Telefon <span class="phone-time">(ab 15:00)</span></h5>
+                <p><a href="tel:+436767402780">+43 676 7402780</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h5>E-Mail</h5>
+                <p><a href="mailto:manuela.wageneder@gmx.at">manuela.wageneder@gmx.at</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2657.1864931542323!2d13.4377551163644!3d48.2415373518923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47741545f028a339%3A0xb9376083654f55ce!2sWachsverarbeitung%20und%20Imkerei%20-%20Wageneder!5e0!3m2!1sde!2sat!4v1636383105804!5m2!1sde!2sat"
-              width="100%" height="100%" id="map" style="border-radius: 0.25rem;" allowfullscreen=""
-              loading="lazy"></iframe>
+              width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
+            </iframe>
           </div>
-          <span class="col-6 p-4" id="footer-content">
-            <div class="col-6 p-1">
-              <img class="footer-logo" src="IMGs/Logo.png" height="100%" width="81.8926%">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="footer-logo">
+            <img src="IMGs/Logo.png" alt="Wageneder Logo" class="img-fluid">
+          </div>
             </div>
-            <div class="col-6 p-4" id="footer-info">
+        <div class="col-lg-6">
+          <div class="footer-links">
               <h5>Informationen</h5>
-              <div><a class="link-secondary" href="Datenschutz.html">Datenschutzerklärung</a></div>
-              <div><a class="link-secondary" href="Impressum.html">Impressum</a></div>
+            <div class="footer-link-list">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#datenschutzModal">Datenschutzerklärung</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#impressumModal">Impressum</a>
             </div>
-          </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="footer-bottom">
+            <p>&copy; 2024 Wageneder - Wachsverarbeitung & Imkerei. Alle Rechte vorbehalten.</p>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
+  <!-- Product Modals -->
+  <!-- Candles Modal -->
+  <div class="modal fade" id="candlesModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Kerzen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Unsere handgemachten Bienenwachskerzen werden aus hochwertigem, reinem Bienenwachs hergestellt. 
+          Jede Kerze ist ein Unikat und wird mit Liebe zum Detail gefertigt.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h6>Besondere Eigenschaften:</h6>
+              <ul>
+                <li>100% reines Bienenwachs</li>
+                <li>Handgemacht</li>
+                <li>Natürlicher Honigduft</li>
+                <li>Lange Brenndauer</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6>Verfügbare Formen:</h6>
+              <ul>
+                <li>Biene (groß/klein)</li>
+                <li>Bienenhaus</li>
+                <li>Bienenkorb</li>
+                <li>Christbaumkerzen</li>
+                <li>Stumpen (verschiedene Größen)</li>
+                <li>Weihnachtsmotive</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Mittelwände Modal -->
+  <div class="modal fade" id="mittelwaendeModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mittelwände</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Wir produzieren Mittelwände in allen gängigen Maßen - sowohl gegossen als auch gewalzt.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h6>Verfügbare Typen:</h6>
+              <ul>
+                <li>Konventionelle Mittelwände</li>
+                <li>Bio Mittelwände</li>
+                <li>Rückstandsarme Mittelwände</li>
+                <li>Rückstandsarm Premium</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6>Besondere Services:</h6>
+              <ul>
+                <li>Eigenwachsumarbeitung ab 30kg</li>
+                <li>Alle gängigen Maße</li>
+                <li>Sondermaße auf Anfrage</li>
+                <li>Zertifikate verfügbar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bienenwachswickel Modal -->
+  <div class="modal fade" id="wickelModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bienenwachswickel</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ein traditionelles Hausmittel bei Husten und Erkältungen. Unsere Bienenwachswickel werden in Handarbeit 
+          aus ungebleichter Baumwolle und biologischem Bienenwachs hergestellt.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h6>Anwendung:</h6>
+              <ul>
+                <li>Vor Gebrauch auf Brustgröße zuschneiden</li>
+                <li>Mit Föhn oder Kirschkernsackerl erwärmen</li>
+                <li>Direkt auf die Haut auflegen</li>
+                <li>Mit Unterhemd oder Tuch fixieren</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6>Preise:</h6>
+              <ul>
+                <li>Groß (ca. 12cm x 20cm): € 7,00</li>
+                <li>Klein (ca. 12cm x 10cm): € 4,00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wachsplatten Modal -->
+  <div class="modal fade" id="wachsplattenModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Wachsplatten</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Wachsplatten zur Kerzenherstellung in allen gewünschten Größen und Mengen.</p>
+          <div class="text-center">
+            <h6>Preis auf Anfrage!</h6>
+            <p>Kontaktieren Sie uns für individuelle Anfragen bezüglich Größe und Menge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Datenschutz Modal -->
+  <div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="datenschutzModalLabel">Datenschutzerklärung</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4>Hinweise zur Datenverarbeitung im Zusammenhang mit Google Analytics</h4>
+          <p>
+            Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited.
+            Wenn der Verantwortliche für die Datenverarbeitung auf dieser Website außerhalb des
+            Europäischen Wirtschaftsraumes oder der Schweiz sitzt, dann erfolgt die Google Analytics
+            Datenverarbeitung durch Google LLC. Google LLC und Google Ireland Limited werden nachfolgend "Google" genannt.
+          </p>
+          <p>
+            Google Analytics verwendet sog. "Cookies", Textdateien, die auf dem Computer des
+            Seitenbesuchers gespeichert werden und die eine Analyse der Benutzung der Website durch den Seitenbesucher
+            ermöglichen. Die durch das Cookie erzeugten Informationen über die Benutzung dieser Website
+            durch den Seitenbesucher (einschließlich der gekürzten IP-Adresse) werden in der Regel an
+            einen Server von Google übertragen und dort gespeichert.
+          </p>
+          <p>
+            Google Analytics wird ausschließlich mit der Erweiterung "_anonymizeIp()" auf dieser Website
+            verwendet. Diese Erweiterung stellt eine Anonymisierung der IP-Adresse durch Kürzung sicher
+            und schließt eine direkte Personenbeziehbarkeit aus. Durch die Erweiterung wird die IP-Adresse
+            von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten
+            des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird
+            die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Die im
+            Rahmen von Google Analytics von dem entsprechenden Browser übermittelte IP-Adresse wird
+            nicht mit anderen Daten von Google zusammengeführt.
+          </p>
+          <p>
+            Im Auftrag des Seitenbetreibers wird Google die anfallenden Informationen benutzen, um die
+            Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen
+            und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen dem
+            Seitenbetreiber gegenüber zu erbringen (Art. 6 Abs. 1 lit. f DSGVO). Das berechtigte
+            Interesse an der Datenverarbeitung liegt in der Optimierung dieser Website, der Analyse der Benutzung
+            der Website und der Anpassung der Inhalte. Die Interessen der Nutzer werden durch die
+            Pseudonymisierung hinreichend gewahrt.
+          </p>
+          <p>
+            Google LLC. bietet eine Garantie auf Basis der Standardvertragsklauseln ein angemessenes
+            Datenschutzniveau einzuhalten. Die gesendeten und mit Cookies, Nutzerkennungen (z. B.
+            User-ID) oder Werbe-IDs verknüpften Daten werden nach 50 Monaten automatisch gelöscht. Die Löschung
+            von Daten, deren Aufbewahrungsdauer erreicht ist, erfolgt automatisch einmal im Monat.
+          </p>
+          <p>
+            Die Erfassung durch Google Analytics kann verhindert werden, indem der Seitenbesucher die
+            Cookie-Einstellungen für diese Website anpasst. Der Erfassung und Speicherung der IP-Adresse und
+            der durch Cookies erzeugten Daten kann außerdem jederzeit mit Wirkung für die Zukunft
+            widersprochen werden. Das entsprechende Browser-Plugin kann unter dem folgenden Link heruntergeladen und
+            installiert werden: https://tools.google.com/dlpage/gaoptout.
+          </p>
+          <p>
+            Der Seitenbesucher kann die Erfassung durch Google Analytics auf dieser Webseite verhindern,
+            indem er auf folgenden Link klickt. Es wird ein Opt-Out-Cookie gesetzt, der die zukünftige
+            Erfassung der Daten beim Besuch dieser Website verhindert.
+          </p>
+          <p>
+            Weitere Informationen zur Datennutzung durch Google, Einstellungs- und
+            Widerspruchsmöglichkeiten, finden sich in der Datenschutzerklärung von Google (https://policies.google.com/privacy)
+            sowie in den Einstellungen für die Darstellung von Werbeeinblendungen durch Google
+            (https://adssettings.google.com/authenticated).
+          </p>
+          <h4>reCAPTCHA</h4>
+          <p>
+            Zum Schutz Ihrer Anfragen per Internetformular verwenden wir den Dienst reCAPTCHA des
+            Unternehmens Google LLC (Google). Die Abfrage dient der Unterscheidung, ob die Eingabe durch
+            einen Menschen oder missbräuchlich durch automatisierte, maschinelle Verarbeitung erfolgt.
+            Die Abfrage schließt den Versand der IP-Adresse und ggf. weiterer von Google für den Dienst
+            reCAPTCHA benötigter Daten an Google ein. Zu diesem Zweck wird Ihre Eingabe an Google
+            übermittelt und dort weiter verwendet. Ihre IP-Adresse wird von Google jedoch innerhalb von
+            Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über
+            den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse
+            an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers
+            dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung dieses Dienstes
+            auszuwerten. Die im Rahmen von reCaptcha von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen
+            Daten von Google zusammengeführt. Für diese Daten gelten die abweiche dishlen
+            Datenschutzbestimmungen des Unternehmens Google. Weitere Informationen zu den Datenschutzrichtlinien von Google
+            finden Sie unter: https://policies.google.com/privacy?hl=de
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impressum Modal -->
+  <div class="modal fade" id="impressumModal" tabindex="-1" aria-labelledby="impressumModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="impressumModalLabel">Impressum</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Gerhard Wageneder <br>
+            Hofing 28, 4970 Eitzing <br><br>
+            mobil: +43 (0) 676 7402780 <br><br>
+            Firmensitz: Hofing 28, 4970 Eitzing <br><br>
+            UID-Nr.: ATU 733 53 934 <br>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('mainNav');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Add animation classes when elements come into view
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 
 </html>
