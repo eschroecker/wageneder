@@ -192,6 +192,9 @@ img {
   padding: 8rem 0 6rem;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 /* LCP Background Image - Now as HTML element for better performance */
@@ -1047,7 +1050,10 @@ img {
   }
   
   .hero-section {
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
   }
   
   /* Mobile: Vertical gradient instead of horizontal */
@@ -1223,7 +1229,10 @@ img {
   }
   
   .hero-section {
-    padding: 7rem 0 3rem;
+    padding: 9rem 0 3rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
   }
   
   .hero-title {
