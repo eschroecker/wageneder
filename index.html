@@ -530,7 +530,7 @@
 
 
   <!-- Contact Section -->
-  <section id="contact" class="section-padding bg-light">
+  <section id="contact" class="section-padding">
       <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center mb-5">
@@ -622,8 +622,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p>Unsere handgemachten Bienenwachskerzen werden aus hochwertigem, reinem Bienenwachs hergestellt. 
-          Jede Kerze ist ein Unikat und wird mit Liebe zum Detail gefertigt.</p>
+          <div class="modal-quote" style="padding: 1rem 1.5rem; margin: 1rem 0; background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(218, 165, 32, 0.05)); border-left: 4px solid #8B4513; border: 2px solid #DAA520; border-radius: 8px; font-style: italic; font-size: 1rem; line-height: 1.6; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+            <i class="fas fa-quote-left me-2" style="font-size: 1.4rem; color: #DAA520 !important; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);"></i>
+            <p class="d-inline" style="margin: 0; color: #2c3e50; font-weight: 700;">Unsere handgemachten Bienenwachskerzen werden aus hochwertigem, reinem Bienenwachs hergestellt. Jede Kerze ist ein Unikat und wird mit Liebe zum Detail gefertigt.</p>
+          </div>
           <div class="row">
             <div class="col-md-6">
               <h6>Besondere Eigenschaften:</h6>
@@ -660,24 +662,78 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p>Wir produzieren Mittelwände in allen gängigen Maßen - sowohl gegossen als auch gewalzt.</p>
-          <div class="row">
-            <div class="col-md-6">
-              <h6>Verfügbare Typen:</h6>
-              <ul>
-                <li>Konventionelle Mittelwände</li>
-                <li>Bio Mittelwände</li>
-                <li>Rückstandsarme Mittelwände</li>
-              </ul>
+          <div class="modal-quote" style="padding: 1rem 1.5rem; margin: 1rem 0; background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(218, 165, 32, 0.05)); border-left: 4px solid #8B4513; border: 2px solid #DAA520; border-radius: 8px; font-style: italic; font-size: 1rem; line-height: 1.6; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+            <i class="fas fa-quote-left me-2" style="font-size: 1.4rem; color: #DAA520 !important; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);"></i>
+            <p class="d-inline" style="margin: 0; color: #2c3e50; font-weight: 700;">Unsere Mittelwände sind ein 100%iges Naturprodukt, seuchenfrei und können in allen Maßen produziert werden.</p>
+          </div>
+          
+          <!-- Verfügbare Maße - Collapsible -->
+          <div class="mb-3">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#mittelwandMasse" aria-expanded="false" aria-controls="mittelwandMasse">
+              <i class="fas fa-list me-2"></i>Verfügbare Maße
+            </button>
+            <div class="collapse mt-2" id="mittelwandMasse">
+              <div class="card card-body">
+                <h6>Verfügbare Mittelwand-Maße:</h6>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li><strong>Einheitsmaß:</strong> 345 x 195 mm</li>
+                      <li><strong>Einheitsmaß Flachzarge:</strong> 345 x 135 mm</li>
+                      <li><strong>Einheitsmaß Jumbo:</strong> 345 x 295 mm</li>
+                      <li><strong>Dadant Blatt Brutraum:</strong> 410 x 265 mm</li>
+                      <li><strong>Dadant Blatt Honigraum:</strong> 410 x 130 mm</li>
+                      <li><strong>Dadant US Brutraum:</strong> 420 x 260 mm</li>
+                      <li><strong>Dadant US Honigraum:</strong> 420 x 135 mm</li>
+                      <li><strong>Dadant Honig Adam/Ries:</strong> 420 x 115 mm</li>
+                      <li><strong>Dadant modifiziert:</strong> 420 x 250 mm</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li><strong>Langstroth Brutraum:</strong> 420 x 200 mm</li>
+                      <li><strong>Langstroth Honigraum:</strong> 420 x 160 mm</li>
+                      <li><strong>Zander:</strong> 395 x 195 mm</li>
+                      <li><strong>Zander Flachzarge:</strong> 395 x 135 mm</li>
+                      <li><strong>Zander Jumbo:</strong> 390 x 295 mm</li>
+                      <li><strong>Zandant:</strong> 395 x 266 mm</li>
+                      <li><strong>Kuntsch:</strong> 305 x 220 mm</li>
+                      <li><strong>Mini Plus:</strong> 195 x 135 mm</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6">
-              <h6>Besondere Services:</h6>
-              <ul>
-                <li>Eigenwachsumarbeitung ab 30kg</li>
-                <li>Alle gängigen Maße</li>
-                <li>Sondermaße auf Anfrage</li>
-                <li>Zertifikate verfügbar</li>
-              </ul>
+          </div>
+          
+          <h6>Konventionelle Mittelwände:</h6>
+          <p>Unsere konventionellen Mittelwände werden aus Wachs von österreichischen Imkern produziert. Sie sind keiner Analyse unterzogen.</p>
+          
+          <h6>Bio Mittelwände:</h6>
+          <p>Wir produzieren unser Bio Mittelwände ausschließlich aus Wachs von zertifizierten, österreichischen Bio Betrieben. Sie erhalten beim Kauf unser Bio Zertifikat dazu.</p>
+          
+          <h6>Rückstandsarme Mittelwände:</h6>
+          <p>Die rückstandsarmen (oder auch „rückstandsfrei lt. EU Bio VO) Mittelwände werden aus Wachs aus Afrika, Neuseeland oder Australien hergestellt. Sie sind qualitativ den Bio Mittelwänden zuzuordnen. Wachs aus Afrika ist dunkler und riecht rauchig, was beim australischen oder neuseeländischen Wachs wesentlich weniger der Fall ist. Diese Mittelwände bekommen Sie bei uns mit Rückstandsanalyse, die der Bio Verordnung entspricht.</p>
+          
+          <h6>Eigenwachsumarbeitung:</h6>
+          <p>Ab 30 kg verarbeiten wir Ihr eigenes Bienenwachs. Diese Mittelwände werden ausschließlich gegossen, da in der Gießmaschine eine völlige Restentleerung möglich ist. Das Wachs wird auf 125 ° erhitzt, damit es entkeimt und gereinigt ist und somit wieder zu Mittelwänden verarbeitet werden kann. Je nach Wachsmenge können wir auch gegen Aufpreis mehrere Maße machen.</p>
+          
+          <!-- Allgemeines - Collapsible -->
+          <div class="mb-3">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#mittelwandAllgemeines" aria-expanded="false" aria-controls="mittelwandAllgemeines">
+              <i class="fas fa-info-circle me-2"></i>Allgemeines
+            </button>
+            <div class="collapse mt-2" id="mittelwandAllgemeines">
+              <div class="card card-body">
+                <h6>Was sind Mittelwände?</h6>
+                <p>Eine Mittelwand ist eine gewalzte oder gegossene Platte aus Bienenwachs mit einem vorgeprägten Relief in Form von gleichseitigen Sechsecken, die die Größe von Arbeiterinnen-Brutzellen einer natürlich gebauten Bienenwabe haben. Mittelwände werden in der Imkerei verwendet, um den Wabenbau der Bienen zu ordnen und zu beschleunigen. Wir produzieren alle gängigen Maß und auch Sondermaße. Nach dem Einhängen des Rähmchens ins Bienenvolk greifen die Bienen das vorgegebene Muster auf und nutzen so den Platz auf der Wabe am günstigsten. Sie bauen regelmäßiger als ohne Mittelwand und zudem schneller, da sie auf der gesamten Fläche gleichzeitig mit dem Ausbau beginnen können. Auf Mittelwände aufgebaute Honigwaben lassen sich wegen ihrer Regelmäßigkeit im Gegensatz zu unwuchten Wildbauten problemlos mit einer Honigschleuder abschleudern. Wird eine Wabe dabei beschädigt oder war eine Brutwabe längere Zeit in Gebrauch, so schneidet man die Wabe aus dem Rähmchen heraus und schmilzt sie ein. Aus dem gereinigten Wachs können dann wieder neue Mittelwände hergestellt werden.</p>
+                
+                <h6>Zellmaß:</h6>
+                <p>Das Standardzellmaß heutiger Mittelwände beträgt 5,4 mm, welches wir ausschließlich anbieten.</p>
+                
+                <h6>Vorteile der Mittelwand:</h6>
+                <p>Normalerweise bauen Bienen eine Wabe von oben nach unten. Bei Verwendung eines Rahmen ohne Mittelwand bauen die Bienen sie nicht vollständig nach unten bis zum unteren Rahmenträger aus, um diesen Spalt als schnellen Durchgang zwischen den Waben zu nutzen. Durch eine Mittelwand wird das Rahmen vollständig mit einer Wabenvorlage ausgefüllt, sodass die Bienen die gesamte zur Verfügung stehende Rahmenfläche ausbauen und nutzen. Neben der Drahtung der Wabe, die für das Einlöten der Mittelwand erforderlich ist, bietet der vollständige Ausbau bis an den Unterträger eine wesentlich bessere Stabilität für die Wabe.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -694,23 +750,35 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p>Ein traditionelles Hausmittel bei Husten und Erkältungen. Unsere Bienenwachswickel werden in Handarbeit 
-          aus ungebleichter Baumwolle und biologischem Bienenwachs hergestellt.</p>
+          <div class="modal-quote" style="padding: 1rem 1.5rem; margin: 1rem 0; background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(218, 165, 32, 0.05)); border-left: 4px solid #8B4513; border: 2px solid #DAA520; border-radius: 8px; font-style: italic; font-size: 1rem; line-height: 1.6; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+            <i class="fas fa-quote-left me-2" style="font-size: 1.4rem; color: #DAA520 !important; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);"></i>
+            <p class="d-inline" style="margin: 0; color: #2c3e50; font-weight: 700;">Ein traditionelles Hausmittel bei Husten und Erkältungen. Unsere Bienenwachswickel werden in Handarbeit aus ungebleichter Baumwolle und biologischem Bienenwachs hergestellt.</p>
+          </div>
+          
+          <h6>Wirkung:</h6>
+          <p>Durch lang anhaltende Wärme lindert der Bienenwachswickel den Reizhusten und wirkt schleimlösend auf natürliche Art. Er ist auch bei Kindern sehr beliebt und eignet sich bestens zum Kombinieren mit Aromamischungen (z.B. Thymian-Myrte-Balsam).</p>
+          
+          <h6>Anwendung:</h6>
+          <p>Das Wachstuch vor Gebrauch auf Brustgröße zuschneiden und mittels Föhn oder Kirschkernsackerl erwärmen, bis es weich und angenehm warm ist. Den warmen Wickel direkt auf die Haut auflegen und mit einem engen Unterhemd oder Tuch fixieren.</p>
+          
+          <div class="alert alert-warning">
+            <strong>Wichtige Hinweise:</strong>
+            <ul class="mb-0">
+              <li>Bitte unbedingt die Temperatur kontrollieren, besonders bei Kindern</li>
+              <li>Nicht bei Überreaktion gegen Bienenprodukte anwenden</li>
+              <li>Nicht waschbar - bei Raumtemperatur aufbewahren</li>
+            </ul>
+          </div>
+          
+          <h6>Anwendungsdauer:</h6>
+          <p>Der Bienenwachswickel kann tagsüber und auch abends vor dem Einschlafen aufgelegt werden – so kann er die ganze Nacht wirken. Bei Säuglingen genügt oft schon eine Anwendungsdauer von 1-3 Stunden. Dieses Produkt kann öfters verwendet werden.</p>
+          
+          <h6>Preise:</h6>
           <div class="row">
             <div class="col-md-6">
-              <h6>Anwendung:</h6>
-              <ul>
-                <li>Vor Gebrauch auf Brustgröße zuschneiden</li>
-                <li>Mit Föhn oder Kirschkernsackerl erwärmen</li>
-                <li>Direkt auf die Haut auflegen</li>
-                <li>Mit Unterhemd oder Tuch fixieren</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h6>Preise:</h6>
-              <ul>
-                <li>Groß (ca. 12cm x 20cm): € 7,00</li>
-                <li>Klein (ca. 12cm x 10cm): € 4,00</li>
+              <ul class="list-unstyled">
+                <li><strong>Groß:</strong> ca. 12cm x 20cm - € 7,00</li>
+                <li><strong>Klein:</strong> ca. 12cm x 10cm - € 4,00</li>
               </ul>
             </div>
           </div>
@@ -728,7 +796,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p>Wachsplatten zur Kerzenherstellung in allen gewünschten Größen und Mengen.</p>
+          <div class="modal-quote" style="padding: 1rem 1.5rem; margin: 1rem 0; background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(218, 165, 32, 0.05)); border-left: 4px solid #8B4513; border: 2px solid #DAA520; border-radius: 8px; font-style: italic; font-size: 1rem; line-height: 1.6; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+            <i class="fas fa-quote-left me-2" style="font-size: 1.4rem; color: #DAA520 !important; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);"></i>
+            <p class="d-inline" style="margin: 0; color: #2c3e50; font-weight: 700;">Wachsplatten zur Kerzenherstellung in allen gewünschten Größen und Mengen.</p>
+          </div>
           <div class="text-center">
             <h6>Preis auf Anfrage!</h6>
             <p>Kontaktieren Sie uns für individuelle Anfragen bezüglich Größe und Menge.</p>
