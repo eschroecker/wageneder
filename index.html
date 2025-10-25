@@ -373,7 +373,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-5">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-5">
           <div class="candle-card">
             <img src="IMGs/Kerzen-5.jpg" alt="Christbaumkerzen" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -382,7 +382,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-6">
           <div class="candle-card">
             <img src="IMGs/Kerzen-6.jpg" alt="Kripperl" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -391,7 +391,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-7">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-7">
           <div class="candle-card">
             <img src="IMGs/Kerzen-7.jpg" alt="Kugel" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -400,7 +400,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-8">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-8">
           <div class="candle-card">
             <img src="IMGs/Kerzen-8.jpg" alt="Stern" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -409,7 +409,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-9">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-9">
           <div class="candle-card">
             <img src="IMGs/Kerzen-9.jpg" alt="Stumpen groß" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -418,7 +418,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-10">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-10">
           <div class="candle-card">
             <img src="IMGs/Kerzen-10.jpg" alt="Stumpen klein" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -427,7 +427,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-11">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-11">
           <div class="candle-card">
             <img src="IMGs/Kerzen-11.jpg" alt="Stumpen mittel" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -436,7 +436,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-md-block d-none" id="candle-12">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-none" id="candle-12">
           <div class="candle-card">
             <img src="IMGs/Kerzen-12.jpg" alt="Tannenbaum" class="img-fluid" loading="lazy" width="250" height="250">
             <div class="candle-info">
@@ -446,10 +446,13 @@
           </div>
         </div>
         
-        <!-- Show More Button for Mobile -->
-        <div class="col-12 d-md-none text-center mb-4">
+        <!-- Show More/Less Button -->
+        <div class="col-12 text-center mb-4">
           <button class="btn btn-outline-primary" id="showMoreBtn" onclick="showMoreCandles()">
-            Mehr anzeigen
+            <i class="fas fa-chevron-down me-2"></i>Mehr anzeigen
+          </button>
+          <button class="btn btn-outline-primary d-none" id="showLessBtn" onclick="showLessCandles()">
+            <i class="fas fa-chevron-up me-2"></i>Weniger anzeigen
           </button>
         </div>
       </div>
@@ -1125,20 +1128,38 @@
     });
   </script>
 
-  <!-- Show More Candles JavaScript -->
+  <!-- Show More/Less Candles JavaScript -->
   <script>
     function showMoreCandles() {
-      // Show all hidden candles on mobile
+      // Show all hidden candles
       const hiddenCandles = document.querySelectorAll('[id^="candle-"]');
       const showMoreBtn = document.getElementById('showMoreBtn');
+      const showLessBtn = document.getElementById('showLessBtn');
       
       hiddenCandles.forEach(candle => {
         candle.classList.remove('d-none');
         candle.classList.add('d-block');
       });
       
-      // Hide the "Mehr anzeigen" button
-      showMoreBtn.style.display = 'none';
+      // Hide "Mehr anzeigen" button and show "Weniger anzeigen" button
+      showMoreBtn.classList.add('d-none');
+      showLessBtn.classList.remove('d-none');
+    }
+    
+    function showLessCandles() {
+      // Hide all candles except the first 4
+      const hiddenCandles = document.querySelectorAll('[id^="candle-"]');
+      const showMoreBtn = document.getElementById('showMoreBtn');
+      const showLessBtn = document.getElementById('showLessBtn');
+      
+      hiddenCandles.forEach(candle => {
+        candle.classList.remove('d-block');
+        candle.classList.add('d-none');
+      });
+      
+      // Show "Mehr anzeigen" button and hide "Weniger anzeigen" button
+      showMoreBtn.classList.remove('d-none');
+      showLessBtn.classList.add('d-none');
     }
   </script>
 </body>
