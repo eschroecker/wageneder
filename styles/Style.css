@@ -777,56 +777,6 @@ img {
   object-fit: cover;
 }
 
-/* Downloads Section */
-.downloads-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.download-card {
-  background: white;
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.download-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  text-decoration: none;
-  color: inherit;
-}
-
-.download-icon {
-  background: var(--secondary-color);
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-.download-content h5 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.download-content p {
-  color: var(--text-light);
-  margin-bottom: 0;
-  font-size: 0.9rem;
-}
 
 /* Contact Section */
 .contact-info {
@@ -1182,23 +1132,6 @@ img {
     margin-bottom: 2rem;
   }
   
-  .downloads-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .download-card {
-    padding: 1rem;
-    flex-direction: column;
-    text-align: center;
-    gap: 0.8rem;
-  }
-  
-  .download-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
   
   .contact-info {
     display: flex;
@@ -1439,33 +1372,6 @@ img {
     hyphens: auto;
   }
   
-  /* Downloads section for extra small screens */
-  .downloads-grid {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-  
-  .download-card {
-    padding: 0.8rem;
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
-  
-  .download-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 1rem;
-  }
-  
-  .download-content h5 {
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-  }
-  
-  .download-content p {
-    font-size: 0.8rem;
-  }
   
   /* Contact section for extra small screens - centered */
   .contact-info {
